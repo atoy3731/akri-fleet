@@ -1,0 +1,17 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: akri-fleet
+  namespace: fleet-default
+spec:
+  repo: ssh://git@git-ssh.atoy.lol/home/akri-fleet.git
+  clientSecretName: private-key
+  branch: main
+  targets:
+  - name: akri
+    clusterSelector:
+      matchLabels:
+        akri: enabled
+  paths:
+  - ./akri
+  - ./akri-devices
