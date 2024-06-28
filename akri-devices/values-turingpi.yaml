@@ -11,3 +11,7 @@ devices:
   capacity: 1
   vendorID: "0bda"
   productID: "2838"
+- name: generic-device
+  capacity: 1
+  vendorID: "1a6e"
+  productID: "089a"
