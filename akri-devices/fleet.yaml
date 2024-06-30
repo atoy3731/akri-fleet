@@ -13,10 +13,10 @@ dependsOn:
       app: akri
 
 targetCustomizations:
-- name: turingpi
+- name: elemental-rpi
   clusterSelector:
     matchLabels:
-      cluster: turingpi
+      cluster: elemental-rpi
   helm:
     valuesFiles:
-    - values-turingpi.yaml
+    - values-elemental-rpi.yaml
