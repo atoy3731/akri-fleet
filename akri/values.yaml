@@ -1,4 +1,3 @@
-kubernetesDistro: k3s
 onvif:
   discovery:
     enabled: true
