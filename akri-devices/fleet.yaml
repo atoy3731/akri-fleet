@@ -16,7 +16,7 @@ targetCustomizations:
 - name: elemental-rpi
   clusterSelector:
     matchLabels:
-      cluster: elemental-rpi
+      inference: enabled
   helm:
     valuesFiles:
     - values-elemental-rpi.yaml
