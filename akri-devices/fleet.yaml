@@ -6,6 +6,8 @@ labels:
 helm:
   chart: ./chart
   releaseName: akri-devices
+  valuesFiles:
+    - values-elemental-rpi.yaml
 
 dependsOn:
 - selector:
