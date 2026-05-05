@@ -10,3 +10,16 @@ helm:
   releaseName: akri
   valuesFiles:
   - values.yaml
+
+diff:
+  comparePatches:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: akri-agent-binding
+    operations:
+    - {"op": "remove", "path": "/roleRef/apiGroup"}
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    name: akri-controller-binding
+    operations:
+    - {"op": "remove", "path": "/roleRef/apiGroup"}
